@@ -5,7 +5,6 @@
 ![OpenWrt](https://img.shields.io/badge/OpenWrt-compatible-green)
 ![OpenClash](https://img.shields.io/badge/OpenClash-supported-blue)
 ![Clash Meta](https://img.shields.io/badge/Core-Clash%20Meta-blue)
-![Last Commit](https://img.shields.io/github/last-commit/Rama-X2/nokarin-ex-wami)
 ![Stars](https://img.shields.io/github/stars/Rama-X2/nokarin-ex-wami?style=social)
 
 A curated collection of **OpenClash configuration files for OpenWrt routers**.
