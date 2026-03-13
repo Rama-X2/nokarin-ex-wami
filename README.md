@@ -1,1 +1,180 @@
+---
+
 # nokarin-ex-wami
+
+![OpenWrt](https://img.shields.io/badge/OpenWrt-compatible-green)
+![OpenClash](https://img.shields.io/badge/OpenClash-supported-blue)
+![License](https://img.shields.io/badge/license-MIT-lightgrey)
+
+A collection of custom **OpenClash configurations** designed for **OpenWrt routers**.
+
+This repository contains configuration files that I personally use for routing traffic through OpenClash with stable DNS settings, optimized rules, and flexible routing behavior.
+
+The goal of this project is to make OpenClash deployment easier without having to build configurations from scratch.
+
+---
+
+# Features
+
+* Ready-to-use OpenClash configurations
+* Optimized rule-based routing
+* Stable DNS configuration
+* Compatible with multiple Clash protocols
+* Suitable for tunneling setups
+* Designed for daily network usage
+
+---
+
+# Requirements
+
+Before using these configurations, make sure your router has:
+
+* **OpenWrt installed**
+* **luci-app-openclash**
+* **Clash Core or Clash Meta Core**
+* Active internet connection
+
+If OpenClash is not installed yet:
+
+```
+opkg update
+opkg install luci-app-openclash
+```
+
+---
+
+# Installation
+
+### 1. Clone the repository
+
+```
+git clone https://github.com/Rama-X2/nokarin-ex-wami.git
+```
+
+Or download it manually from GitHub.
+
+---
+
+### 2. Upload configuration files
+
+Upload the configuration file to:
+
+```
+/etc/openclash/config/
+```
+
+You can use:
+
+* SCP
+* WinSCP
+* LuCI file transfer
+* SSH terminal
+
+---
+
+### 3. Load the configuration
+
+Open the OpenClash panel:
+
+```
+LuCI → Services → OpenClash → Config
+```
+
+Then select the configuration you uploaded.
+
+---
+
+# Recommended Settings
+
+For better stability and performance:
+
+| Setting      | Recommended Value |
+| ------------ | ----------------- |
+| Mode         | TUN Mode          |
+| DNS Mode     | Fake-IP           |
+| Core         | Clash Meta        |
+| Auto Restart | Enabled           |
+| Dashboard    | Enabled           |
+
+---
+
+# Folder Structure
+
+Example repository structure:
+
+```
+nokarin-ex-wami
+│
+├── config/
+│   ├── openclash-config.yaml
+│   └── example-config.yaml
+│
+├── rules/
+│   ├── custom-rules.yaml
+│   └── bypass-rules.yaml
+│
+└── README.md
+```
+
+---
+
+# Example Configuration
+
+Example snippet from a Clash configuration:
+
+```yaml
+mode: rule
+
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  listen: 0.0.0.0:7874
+
+proxies:
+  - name: example-vmess
+    type: vmess
+    server: example.com
+    port: 443
+```
+
+---
+
+# Notes
+
+* Some rules may need adjustment depending on your ISP.
+* If you are using **SNI bug or wildcard tunneling**, ensure your node configuration is correct.
+* Not all nodes perform the same across different networks.
+
+---
+
+# Contributing
+
+Contributions are welcome.
+
+Feel free to open:
+
+* **Pull Requests**
+* **Issues**
+
+to improve rules, configurations, or stability.
+
+---
+
+# Disclaimer
+
+These configurations are provided as reference examples.
+
+Use them at your own risk.
+
+---
+
+# Author
+
+Maintained by
+
+**Rama-X2**
+
+GitHub
+[https://github.com/Rama-X2](https://github.com/Rama-X2)
+
+---
