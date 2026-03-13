@@ -1,10 +1,4 @@
----
 
-# nokarin-ex-wami
-
-![OpenWrt](https://img.shields.io/badge/OpenWrt-compatible-green)
-![OpenClash](https://img.shields.io/badge/OpenClash-supported-blue)
-![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
 A collection of custom **OpenClash configurations** designed for **OpenWrt routers**.
 
