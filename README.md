@@ -134,7 +134,7 @@ Example traffic flow when using OpenClash in **TUN mode**:
          Proxy Server
                │
                │
-        ┌─────────────┐
+        ┌──────────────┐
         │   OpenClash  │
         │   (Clash)    │
         └──────┬───────┘
